@@ -2,10 +2,11 @@ import React, {Component} from 'react'
 import {ChangeTitle} from '../../libs/utils'
 import defaultLogo from '../../../assests/logo.png'
 import {toast} from 'react-toastify'
-import {projects, project, clients, techs} from '../../../store/models'
-import {getAll, get, put, post} from '../../../store/resourceServices'
+import { projects, project, clients, techs, projectPhoto } from '../../../store/models'
+import {getAll, get, put, post, remove} from '../../../store/resourceServices'
 import {withRouter} from 'react-router-dom'
 import {Button, Form, Segment, Divider, Icon} from 'semantic-ui-react'
+import CloseButton from '../../components/common/CloseButton'
 
 @withRouter
 export default class EditProject extends Component {
@@ -90,6 +91,12 @@ export default class EditProject extends Component {
     }
   }
 
+  removePhoto = index => {
+    this.setState({loading: true})
+    const {_id: id} = this.state
+    remove(projectPhoto, {}, {id, index}).then(res => this.setState({photos: res.photos, loading: false}))
+  }
+
   render () {
     const {logo, name, website, description, loading, tech, allTechs, allClients, client, photos} = this.state
     ChangeTitle('Add project')
@@ -142,20 +149,12 @@ export default class EditProject extends Component {
                 <Form.TextArea
                   name='description' value={description} autoHeight placeholder='About' label='About:'
                   onChange={this._handleChange} />
-                <Form.Field label='Photos:' style={{marginBottom: 0}}/>
+                <Form.Field label='Photos:' style={{marginBottom: 0}} />
 
                 <div className='project-photos'>
-                  {photos.map(photo => <div className='project-photo' style={{backgroundImage: 'url(' + photo + ')'}} />)}
-                  <div className='project-photo' />
-                  <div className='project-photo' />
-                  <div className='project-photo' />
-                  <div className='project-photo' />
-                  <div className='project-photo' />
-                  <div className='project-photo' />
-                  <div className='project-photo' />
-                  <div className='project-photo' />
-                  <div className='project-photo' />
-                  <div className='project-photo' />
+                  {photos.map((photo, index) => <div className='project-photo' style={{backgroundImage: 'url(' + photo + ')'}}>
+                    <CloseButton right onClick={() => this.removePhoto(index)} />
+                  </div>)}
                   <label htmlFor='photo' className='project-photo'><Icon name='plus' /></label>
                   <input id='photo' accept='image/*' type='file' name='logo' onChange={this._handlePhotoChange} />
                 </div>
@@ -168,7 +167,7 @@ export default class EditProject extends Component {
                   onClick={() => this._handleSubmit(true)} />
                 <Button
                   loading={loading} color='green' content='Apply' icon='check' labelPosition='left' type='submit'
-                  floated='right' onClick={() => this._handleSubmit(false)} />
+                  floated='right' onClick={this._handleSubmit} />
                 <Button
                   content='Back' icon='left angle' labelPosition='left' floated='right' as='span'
                   onClick={this._goBack} />

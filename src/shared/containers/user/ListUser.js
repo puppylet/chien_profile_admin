@@ -43,6 +43,6 @@ export default class ListUser extends Component {
       itemsConfig={users}
       route='user'
       search='email'
-      sortOptions={sortOptions}/>
+      sortOptions={sortOptions} />
   }
 }

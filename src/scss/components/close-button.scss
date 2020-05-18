@@ -8,8 +8,12 @@
   cursor: pointer;
   float: left;
 
+  &.cb-right {
+    float: right;
+  }
+
   &:hover {
-    background: #ddd;
+    background: rgba(0, 0, 0, 0.05);
 
     &:active {
       background: #ccc;

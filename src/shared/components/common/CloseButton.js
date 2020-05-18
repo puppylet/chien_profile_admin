@@ -3,9 +3,9 @@ import PropTypes from 'prop-types'
 
 class CloseButton extends Component {
   render () {
-    const {size, onClick} = this.props
+    const {size, onClick, right} = this.props
     return (
-      <div className= {'cb-wrap ' + size} onClick={onClick}>
+      <div className={'cb-wrap ' + size + (right ? ' cb-right' : '')} onClick={onClick}>
         <div className='cb' />
       </div>
     )
@@ -14,6 +14,7 @@ class CloseButton extends Component {
 
 CloseButton.propTypes = {
   size: PropTypes.string,
+  right: PropTypes.bool,
   onClick: PropTypes.func
 }
 

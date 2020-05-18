@@ -10,7 +10,18 @@
     margin-right: 5px;
     margin-bottom: 5px;
     float: left;
-    background-size:cover;
+    background-size: cover;
+
+    .cb-wrap {
+      opacity: 0;
+      transition: opacity 0.5s;
+    }
+
+    &:hover {
+      .cb-wrap {
+        opacity: 1;
+      }
+    }
   }
 
   label {
@@ -23,7 +34,7 @@
       background: #e5e5e5;
 
       &:active {
-        background: #ddd
+        background: #ddd;
       }
     }
 
@@ -32,12 +43,12 @@
       color: #999;
       height: 50px;
       width: 50px;
-      line-height:50px;
+      line-height: 50px;
       text-align: center;
     }
   }
 
   input {
-    display: none
+    display: none;
   }
 }
