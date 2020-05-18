@@ -1,0 +1,61 @@
+.menu-content {
+  line-height: 24px;
+
+  .menu-content {
+    margin-left: 17px;
+  }
+
+  &.collapsed {
+    max-height: 24px;
+  }
+
+
+  overflow: hidden;
+
+  .menu-title {
+    position: relative;
+    margin-left: 17px;
+
+    &:hover {
+      font-weight: bold;
+      .plus, .edit, .trash {
+        display: initial;
+      }
+
+    }
+
+    .icon:not(.angle) {
+      margin-left: 5px;
+    }
+
+    .plus, .edit, .trash {
+      display: none;
+      cursor: pointer;
+      font-size: 10px;
+      color: #ddd;
+
+      &:hover {
+        color: #ccc;
+
+        &:active {
+          color: #bbb;
+        }
+      }
+    }
+
+    .angle {
+      position: absolute;
+      left: -13px;
+      color: #ddd;
+      cursor: pointer;
+
+      &:hover {
+        color: #ccc;
+
+        &:active {
+          color: #bbb;
+        }
+      }
+    }
+  }
+}

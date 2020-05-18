@@ -1,0 +1,20 @@
+$import-google-fonts: true !default;
+$font-url: 'https://fonts.googleapis.com/css?family=Roboto:200,400,700' !default;
+$font-name: 'Roboto' !default;
+$font-family: $font-name, 'Roboto', Arial, Helvetica, sans-serif !default;
+$icons-font-path: '/assets/icons' !default;
+$flags-image-path: '/assets/mages' !default;
+$borderRadius: 0;
+$input-padding: 6px; //0.67857143em 1em;
+$table-padding: $input-padding;
+$select-padding: 6px 15px 6px 6px; //0.67857143em 2.1em 0.67857143em 1em;
+$dropdown-padding: 7px 15px 7px 6px; //0.78571429em 2.1em 0.78571429em 1em;
+$dropdown-min-height: 0; //2.71428571em;
+$dropdown-icon-padding: 0.71666667em;
+$meu-item-padding: 0.78571429rem 0.5rem !important
+
+
+//$input-padding: 0.67857143em 1em;
+//$select-padding: 0.67857143em 2.1em 0.67857143em 1em;
+//$dropdown-padding: 0.78571429em 2.1em 0.78571429em 1em;
+//$dropdown-min-height: 0; //2.71428571em;

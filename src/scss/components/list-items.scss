@@ -1,0 +1,21 @@
+.list-items {
+  td {
+    .button {
+      font-size: 14px !important;
+      background: rgba(0, 0, 0, 0.00) !important;
+      width: 24px;
+      height: 24px;
+      line-height: 24px;
+      text-align: center;
+      padding: 0 !important;
+      user-select: none;
+
+      &:hover {
+        background: rgba(0, 0, 0, 0.05) !important;
+        &:active {
+          background: rgba(0, 0, 0, 0.08) !important;
+        }
+      }
+    }
+  }
+}

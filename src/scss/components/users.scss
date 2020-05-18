@@ -1,0 +1,33 @@
+.users {
+  .users-form {
+    position: relative;
+
+    .general-info {
+      margin-left: 220px;
+      min-height: 250px;
+    }
+    .avatar {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 200px;
+
+      .photo-wrap {
+        width: 200px;
+        height: 200px;
+        background-size: cover;
+        background-position: center center;
+        border: 1px solid #eee;
+      }
+
+      .avatar-edit {
+        width: 110px;
+        margin: 0;
+      }
+
+      input {
+        display: none;
+      }
+    }
+  }
+}

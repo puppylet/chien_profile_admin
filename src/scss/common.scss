@@ -1,0 +1,201 @@
+body {
+  //background: #e5e5e5;
+}
+
+.contain {
+  padding: 0 5px;
+}
+
+* {
+  outline: none;
+}
+
+.ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.small-button {
+  padding: 3px 5px !important;
+}
+
+a {
+  cursor: pointer;
+}
+
+.red {
+  color: #900;
+}
+
+.italic {
+  font-style: italic;
+}
+.bottom-5 {
+  margin-bottom: 5px;
+}
+
+.bottom-10 {
+  margin-bottom: 10px;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.top-10 {
+  margin-top: 10px;
+}
+
+.bottom-20 {
+  margin-bottom: 20px;
+}
+
+.bottom-0 {
+  margin-bottom: 0;
+}
+
+.top-20 {
+  margin-top: 20px;
+}
+
+.left-10 {
+  margin-left: 10px;
+}
+
+.right-10 {
+  margin-right: 10px;
+}
+
+.left-20 {
+  margin-left: 20px;
+}
+
+.right-20 {
+  margin-right: 20px;
+}
+
+.padding-10 {
+  padding: 10px;
+}
+
+.padding-10-ver {
+  padding: 10px 0;
+}
+
+.padding-10-hor {
+  padding: 0 10px;
+}
+
+.padding-20 {
+  padding: 20px;
+}
+
+.padding-20-ver {
+  padding: 20px 0;
+}
+
+.padding-20-hor {
+  padding: 0 20px;
+}
+
+.right {
+  float: right;
+}
+
+.left {
+  float: left;
+}
+
+.clearfix {
+  &::after,
+  &::before {
+    content: "";
+    display: table;
+  }
+
+  &::after {
+    clear: both;
+  }
+}
+
+.main-content {
+  margin-left: $side-bar-width;
+  margin-top: $header-height;
+  padding: 10px;
+
+  .page-title {
+    font-weight: 300;
+  }
+}
+
+.main-form {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+th.is-sorting {
+  background: darken(#f9fafb, 5) !important;
+}
+
+.is-sorting {
+  background: rgba(0, 0, 0, 0.03) !important;
+}
+
+.is-sorting,
+.no-sort {
+  div {
+    cursor: default;
+    user-select: none;
+  }
+}
+
+.selected-row {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.no-sort:hover {
+  background: darken(#f9fafb, 3) !important;
+}
+
+h3.segment-title {
+  margin: 0;
+  float: left;
+  line-height: 26px;
+}
+
+.selectRect {
+  border: 1px dashed rgba(113, 200, 255, 0.5);
+  background: rgba(113, 200, 255, 0.2);
+  position: fixed;
+  z-index: 1000;
+  pointer-events: none;
+}
+
+.editable {
+  cursor: text;
+}
+.editable[placeholder]:empty::before {
+  content: attr(placeholder);
+  color: #ddd;
+}
+
+
+#editor-page {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: 400;
+    margin-top: 0.3em !important;
+  }
+}
+
+.autofill-remover {
+  position: absolute;
+  z-index: -1000;
+  pointer-events: none;
+  opacity: 0;
+}

@@ -1,0 +1,33 @@
+.login {
+  text-align: center;
+  height: 100vh;
+  background: #148cbf;
+
+  &::before {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 0;
+    vertical-align: middle;
+
+  }
+
+  .login-form {
+    max-width: 400px;
+    display: inline-block;
+    vertical-align: middle;
+    width: 100%;
+
+    form {
+      text-align: left;
+      padding: 10px;
+      background: #fff;
+      border-radius: 5px;
+
+      input[type="text"],
+      input[type="password"] {
+        padding: 10px;
+      }
+    }
+  }
+}

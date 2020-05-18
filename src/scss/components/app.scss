@@ -1,0 +1,28 @@
+.main-content {
+  //max-width: 1200px;
+  //margin: 0 auto;
+  padding: 0 5px;
+}
+
+.add-item {
+  position: absolute;
+  z-index: 3;
+  right: -3px;
+  top: -54px;
+}
+
+.ui.labeled.icon.button {
+  padding-top: 13px;
+
+  .icon {
+    top: 2px;
+  }
+}
+
+.art-title.ui.input {
+  input {
+    padding: 0;
+    border: 0;
+    box-shadow: none;
+  }
+}

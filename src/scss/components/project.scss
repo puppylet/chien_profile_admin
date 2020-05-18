@@ -1,0 +1,43 @@
+.project-photos {
+  margin-right: -5px;
+  //margin-right: 10px;
+  overflow: hidden;
+
+  .project-photo {
+    width: calc((100% - 25px) / 5);
+    height: 100px;
+    background: #eee;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    float: left;
+    background-size:cover;
+  }
+
+  label {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:hover {
+      background: #e5e5e5;
+
+      &:active {
+        background: #ddd
+      }
+    }
+
+    .icon {
+      font-size: 30px;
+      color: #999;
+      height: 50px;
+      width: 50px;
+      line-height:50px;
+      text-align: center;
+    }
+  }
+
+  input {
+    display: none
+  }
+}

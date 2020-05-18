@@ -1,0 +1,57 @@
+.cb-wrap {
+  display: block;
+  width: 34px;
+  height: 34px;
+  position: relative;
+  border-radius: 2px;
+  overflow: hidden;
+  cursor: pointer;
+  float: left;
+
+  &:hover {
+    background: #ddd;
+
+    &:active {
+      background: #ccc;
+    }
+  }
+
+  &.small {
+    width: 18px;
+    height: 18px;
+
+    .cb {
+      width: 10px;
+      height: 10px;
+      margin-left: 8px;
+      margin-top: 3px;
+
+      &::before,
+      &::after {
+        height: 12px;
+      }
+    }
+  }
+
+  .cb {
+    width: 10px;
+    height: 20px;
+    margin-left: 16px;
+    margin-top: 7px;
+
+    &::before,
+    &::after {
+      content: '';
+      width: 1px;
+      background: #666;
+      height: 20px;
+      transform: rotate(45deg);
+      display: block;
+      position: absolute;
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+    }
+  }
+}
