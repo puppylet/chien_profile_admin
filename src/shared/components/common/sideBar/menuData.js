@@ -94,6 +94,38 @@ export default [
       }
     ]
   },
+
+  {
+    title: 'Contacts',
+    items: [
+      {
+        title: 'Contact list',
+        to: '/contacts/list',
+        icon: 'comments'
+      },
+      {
+        title: 'Archived contacts',
+        to: '/contacts/archived',
+        icon: 'trash'
+      }
+    ]
+  },
+
+  {
+    title: 'Hirings',
+    items: [
+      {
+        title: 'Hiring list',
+        to: '/hirings/list',
+        icon: 'comments'
+      },
+      {
+        title: 'Archived hirings',
+        to: '/hirings/archived',
+        icon: 'trash'
+      }
+    ]
+  },
   {
     title: 'Clients',
     items: [
@@ -105,21 +137,6 @@ export default [
       {
         title: 'Archived clients',
         to: '/clients/archived',
-        icon: 'trash'
-      }
-    ]
-  },
-  {
-    title: 'Contacts',
-    items: [
-      {
-        title: 'Contact list',
-        to: '/contacts/list',
-        icon: 'users'
-      },
-      {
-        title: 'Archived contacts',
-        to: '/contacts/archived',
         icon: 'trash'
       }
     ]

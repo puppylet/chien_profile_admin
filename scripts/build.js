@@ -51,7 +51,7 @@ measureFileSizesBeforeBuild(paths.appBuild)
     // Start the webpack build
     return build(previousFileSizes)
   })
-.then(
+  .then(
     ({stats, previousFileSizes, warnings}) => {
       if (warnings.length) {
         console.log(chalk.yellow('Compiled with warnings.\n'))

@@ -187,7 +187,7 @@ class ListItems extends Component {
       isLoading, loading, selected, pageSize, showConfirm, showBulkConfirm, sortingField,
       searchField, searchString, isSearching, items, total
     } = this.state
-    const {history, itemName, sortOptions, route} = this.props
+    const {history, itemName, sortOptions, route, disableEditing} = this.props
     const page = this._getPage()
     const {searchOptions} = sortOptions.filter(option => option.value === searchField)[0]
     ChangeTitle(`${itemName} list`)
@@ -240,12 +240,12 @@ class ListItems extends Component {
                   content={`Remove selected ${itemName}`}
                   negative
                   onClick={() => this.setState({showBulkConfirm: true})} />}
-                <Button
+                {!disableEditing && <Button
                   size='tiny'
                   primary
                   content={`Add ${itemName}`}
                   as={Link}
-                  to={`/${pluralize(route)}/new-${route}`} />
+                  to={`/${pluralize(route)}/new-${route}`} />}
               </div>
             </div>
           </Segment>

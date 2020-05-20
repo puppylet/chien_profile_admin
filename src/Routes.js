@@ -19,6 +19,9 @@ const EditClient = asyncComponent(() => import('./shared/containers/client/EditC
 const ProjectList = asyncComponent(() => import('./shared/containers/project/ProjectList').then(module => module.default))
 const CreateProject = asyncComponent(() => import('./shared/containers/project/CreateProject').then(module => module.default))
 const EditProject = asyncComponent(() => import('./shared/containers/project/EditProject').then(module => module.default))
+const ContactList = asyncComponent(() => import('./shared/containers/contact/ContactList').then(module => module.default))
+const HiringList = asyncComponent(() => import('./shared/containers/hiring/HiringList').then(module => module.default))
+const TestimonialList = asyncComponent(() => import('./shared/containers/testimonial/TestimonialList').then(module => module.default))
 
 export default class Routes extends Component {
   render () {
@@ -39,6 +42,9 @@ export default class Routes extends Component {
         <Route path='/projects/new-project' component={CreateProject} />
         <Route path='/projects/details/:id' component={EditProject} />
         <Route path='/users/list' component={ListUser} />
+        <Route path='/contacts/list' component={ContactList} />
+        <Route path='/hirings/list' component={HiringList} />
+        <Route path='/testimonials/list' component={TestimonialList} />
         <Route path='/users/new-user' component={CreateUser} />
         <Route path='/users/details/:id' render={() => <EditUser avKey={avKey} userInfo={userInfo} changeMe={this.props.changeMe} />} />
         <Route path='/account' render={() => <Account avKey={avKey} userInfo={userInfo} changeMe={this.props.changeMe} />} />
